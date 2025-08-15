@@ -967,4 +967,23 @@ footer {
 .timeline-item:hover .timeline-image {
     transform: scale(1.08) rotate(-2deg);
     box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+
+}
+/* AR Mode adjustments */
+.ar-active .container {
+    display: none;
+}
+
+.ar-active .music-control,
+.ar-active .day-night-toggle {
+    display: none;
+}
+
+/* Ensure full screen for AR */
+.a-canvas {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
 }
