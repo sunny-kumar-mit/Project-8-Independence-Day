@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const arButton = document.getElementById('arFlag');
     const arScene = document.getElementById('arScene');
+    const body = document.body;
     
-    // Check if AR is available
-    function isARSupported() {
-        return navigator.xr && navigator.xr.isSessionSupported('immersive-ar');
+    // Check for AR support
+    async function checkARSupport() {
+        if (navigator.xr) {
+            return await navigator.xr.isSessionSupported('immersive-ar');
+        }
+        return false;
     }
     
     arButton.addEventListener('click', async function() {
@@ -14,14 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         try {
-            if (await isARSupported()) {
-                showARInstructions();
+            const arSupported = await checkARSupport();
+            if (arSupported) {
+                startARExperience();
             } else {
                 alert('AR is not supported on your device. Please try a different browser or device.');
             }
         } catch (error) {
-            console.error('AR support check failed:', error);
-            alert('Could not check AR support. Please try again later.');
+            console.error('AR error:', error);
+            alert('Error starting AR. Please try again.');
         }
     });
     
@@ -29,109 +34,97 @@ document.addEventListener('DOMContentLoaded', function() {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     }
     
-    function showARInstructions() {
-        const overlay = document.createElement('div');
-        overlay.className = 'ar-overlay';
-        
-        overlay.innerHTML = `
-            <button class="ar-close">×</button>
-            <h2>Hoist the Flag in AR</h2>
-            <div class="ar-instructions">
-                <p>Point your camera at a flat surface to place the Indian flag in your environment.</p>
-                <p>Move around to view the flag from different angles.</p>
-                <p>Tap the flag to make it wave!</p>
-            </div>
-            <button class="ar-capture">Start AR Experience</button>
-        `;
-        
-        document.body.appendChild(overlay);
-        
-        overlay.querySelector('.ar-close').addEventListener('click', function() {
-            document.body.removeChild(overlay);
-        });
-        
-        overlay.querySelector('.ar-capture').addEventListener('click', function() {
-            document.body.removeChild(overlay);
-            startARExperience();
-        });
-    }
-    
     async function startARExperience() {
+        // Hide main content
+        document.querySelector('.container').classList.add('hidden');
+        body.classList.add('ar-active');
+        
+        // Create AR scene
         arScene.innerHTML = `
-            <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;" vr-mode-ui="enabled: false">
+            <a-scene 
+                vr-mode-ui="enabled: false" 
+                renderer="antialias: true; alpha: true" 
+                embedded 
+                arjs="sourceType: webcam; debugUIEnabled: false;"
+            >
                 <a-assets>
-                    <img id="flag-texture" src="https://i.imgur.com/JqYeZZn.png" crossorigin="anonymous">
+                    <img id="flag-texture" src="assets/images/flag-texture.png" crossorigin="anonymous">
                 </a-assets>
                 
-                <a-entity id="flag-entity" position="0 0 0" rotation="-90 0 0">
-                    <a-plane id="flag" 
-                             src="#flag-texture" 
-                             width="1.5" 
-                             height="1" 
-                             position="0 0.5 0"
-                             animation="property: rotation; to: -90 -30 0; dur: 1000; easing: easeInOutSine; loop: true; dir: alternate">
-                    </a-plane>
-                    <a-cylinder id="flag-pole" 
-                                 radius="0.03" 
-                                 height="2" 
-                                 position="0 0 0" 
-                                 color="#8B4513">
-                    </a-cylinder>
+                <a-entity id="flag-anchor" position="0 0 -1">
+                    <a-cylinder id="flag-pole" radius="0.03" height="2" position="0 1 0" color="#8B4513"></a-cylinder>
+                    <a-plane 
+                        id="flag" 
+                        src="#flag-texture" 
+                        width="1.5" 
+                        height="1" 
+                        position="0.75 1.5 0"
+                        animation="property: rotation; to: 0 -30 0; dur: 2000; easing: easeInOutSine; loop: true; dir: alternate"
+                    ></a-plane>
                 </a-entity>
                 
-                <a-entity camera></a-entity>
+                <a-camera gps-camera rotation-reader></a-camera>
             </a-scene>
-            <button class="ar-capture" id="arCapture">📸 Capture Photo</button>
-            <button class="ar-close">Exit AR</button>
+            
+            <div class="ar-controls">
+                <button id="arExit" class="ar-button">Exit AR</button>
+                <button id="arCapture" class="ar-button">📸 Capture</button>
+            </div>
         `;
         
         arScene.classList.remove('hidden');
         
-        document.querySelector('#arScene .ar-close').addEventListener('click', function() {
-            arScene.classList.add('hidden');
-            arScene.innerHTML = '';
-        });
-        
+        // Add event listeners
+        document.getElementById('arExit').addEventListener('click', exitAR);
         document.getElementById('arCapture').addEventListener('click', captureARScreenshot);
         
-        // Add click event to make flag wave
-        const flag = document.querySelector('#flag-entity');
+        // Make flag interactive
+        const flag = document.getElementById('flag');
         flag.addEventListener('click', function() {
-            const currentRotation = this.getAttribute('rotation');
-            const newRotation = {
-                x: currentRotation.x,
-                y: currentRotation.y + (Math.random() * 60 - 30),
-                z: currentRotation.z + (Math.random() * 10 - 5)
-            };
-            this.setAttribute('animation', `property: rotation; to: ${newRotation.x} ${newRotation.y} ${newRotation.z}; dur: 500; easing: easeInOutSine`);
+            this.setAttribute('animation', `
+                property: rotation; 
+                to: 0 ${-30 + Math.random() * 60} 0; 
+                dur: 500; 
+                easing: easeInOutSine
+            `);
         });
     }
     
-    function captureARScreenshot() {
+    function exitAR() {
+        arScene.classList.add('hidden');
+        arScene.innerHTML = '';
+        document.querySelector('.container').classList.remove('hidden');
+        body.classList.remove('ar-active');
+    }
+    
+    async function captureARScreenshot() {
         try {
             const scene = document.querySelector('a-scene');
-            scene.components.screenshot.capture('perspective').then(function(data) {
-                // Create a temporary link to download the image
-                const link = document.createElement('a');
-                link.href = data;
-                link.download = 'indian-flag-ar.jpg';
-                link.click();
-                
-                // Show share options
-                if (navigator.share) {
-                    navigator.share({
+            const canvas = await scene.components.screenshot.getCanvas('perspective');
+            const data = canvas.toDataURL('image/jpeg');
+            
+            // Create download link
+            const link = document.createElement('a');
+            link.href = data;
+            link.download = 'indian-flag-ar.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Share if supported
+            if (navigator.share) {
+                try {
+                    await navigator.share({
                         title: 'Indian Flag in AR',
-                        text: 'Check out this Indian flag I placed in AR!',
-                        url: data
-                    }).catch(err => {
-                        console.log('Error sharing:', err);
+                        text: 'Check out the Indian flag I hoisted in AR!',
+                        files: [new File([data], 'indian-flag.jpg', { type: 'image/jpeg' })]
                     });
-                } else {
-                    alert('Screenshot saved! You can now share it.');
+                } catch (shareError) {
+                    console.log('Sharing cancelled', shareError);
                 }
-            });
+            }
         } catch (error) {
-            console.error('Error capturing AR screenshot:', error);
+            console.error('Screenshot error:', error);
             alert('Could not capture screenshot. Please try again.');
         }
     }
