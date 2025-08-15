@@ -120,3 +120,69 @@
     50% { transform: rotateZ(5deg); }
     100% { transform: rotateZ(-5deg); }
 }
+/* AR Mode Styles */
+.ar-active {
+    overflow: hidden;
+}
+
+#arScene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background: black;
+    display: none;
+}
+
+#arScene.hidden {
+    display: none;
+}
+
+.ar-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    z-index: 1001;
+}
+
+.ar-button {
+    padding: 12px 24px;
+    background: rgba(255, 153, 51, 0.8);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.ar-button:hover {
+    background: rgba(255, 153, 51, 1);
+}
+
+/* A-Frame overrides */
+.a-enter-vr {
+    display: none !important;
+}
+
+.a-loader-title {
+    color: white !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Flag styling */
+#flag {
+    opacity: 0.95;
+    border: 2px solid white;
+}
+
+#flag-pole {
+    opacity: 0.9;
+}
