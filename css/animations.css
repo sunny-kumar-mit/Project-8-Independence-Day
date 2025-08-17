@@ -1,0 +1,260 @@
+/* Floating animation */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Wave animation for flag */
+.wave {
+    animation: wave 8s infinite linear;
+}
+
+@keyframes wave {
+    0% { transform: skewX(0deg); }
+    25% { transform: skewX(5deg); }
+    50% { transform: skewX(0deg); }
+    75% { transform: skewX(-5deg); }
+    100% { transform: skewX(0deg); }
+}
+
+/* Pulse animation */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* 3D Chakra rotation */
+@keyframes rotate3d {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.rotate-3d {
+    animation: rotate3d 10s infinite linear;
+}
+
+/* Parallax effect */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Night mode transition */
+@keyframes fadeToNight {
+    0% { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+    100% { background: linear-gradient(135deg, var(--night-sky) 0%, var(--dark-blue) 100%); }
+}
+
+@keyframes fadeToDay {
+    0% { background: linear-gradient(135deg, var(--night-sky) 0%, var(--dark-blue) 100%); }
+    100% { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+}
+
+/* Fireworks animation */
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px;
+    animation: explode 2s ease-out infinite;
+    opacity: 0;
+}
+
+@keyframes explode {
+    0% { 
+        transform: translate(var(--x), var(--y)) scale(0);
+        opacity: 1;
+    }
+    100% { 
+        transform: translate(var(--x), var(--y)) scale(1);
+        opacity: 0;
+        box-shadow: 0 0 0 20px transparent;
+    }
+}
+
+/* Timeline item animation */
+.timeline-item {
+    transition: transform 0.3s;
+}
+
+.timeline-item:hover {
+    transform: scale(1.05);
+}
+/* Previous animations remain, adding new ones below */
+
+/* Enhanced 3D Chakra */
+@keyframes rotate3d {
+    0% { 
+        transform: rotateY(0deg) rotateZ(0deg);
+        box-shadow: 0 0 10px var(--blue);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--saffron);
+    }
+    100% { 
+        transform: rotateY(360deg) rotateZ(360deg);
+        box-shadow: 0 0 10px var(--blue);
+    }
+}
+
+/* Timeline item animations */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* AR scene animations */
+.ar-flag {
+    animation: floatFlag 3s ease-in-out infinite;
+}
+
+@keyframes floatFlag {
+    0% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(-5deg); }
+}
+
+/* Voice feedback animation */
+.voice-active {
+    animation: pulseGlow 0.5s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 5px var(--saffron); }
+    100% { box-shadow: 0 0 15px var(--green); }
+}
+/* Custom marker animations */
+.custom-marker {
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 3px var(--saffron), 0 2px 5px rgba(0,0,0,0.3);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.custom-marker::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid var(--saffron);
+}
+
+@keyframes bounce-marker {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.bounce-marker {
+    animation: bounce-marker 0.5s ease;
+}
+
+/* Map tiles styling */
+.map-tiles {
+    filter: grayscale(20%) contrast(110%) brightness(0.95);
+}
+
+/* Popup enhancements */
+.map-popup {
+    font-family: 'Poppins', sans-serif;
+}
+
+.popup-image img {
+    border-radius: 5px;
+    margin-top: 8px;
+    border: 1px solid #eee;
+}
+
+.popup-footer {
+    margin-top: 8px;
+    color: #666;
+    font-size: 0.8em;
+    text-align: right;
+}
+/* 3D Chakra rotation */
+.chakra-3d {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate3d 10s infinite linear;
+    background-image: url('https://i.postimg.cc/ncZNvVMH/India-Ashoka-Chakra-Dharmachakra-Buddhism-PNG-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@keyframes rotate3d {
+    0% { 
+        transform: rotateY(0deg) rotateZ(0deg);
+        box-shadow: 0 0 10px var(--blue);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--saffron);
+    }
+    100% { 
+        transform: rotateY(360deg) rotateZ(360deg);
+        box-shadow: 0 0 10px var(--blue);
+    }
+}
+/* Add to your CSS file */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    opacity:0.7/* or higher for more visibility */
+    pointer-events: none;
+}
+.timeline-item {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.6s cubic-bezier(.23,1.02,.32,1);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    border: 2px solid transparent;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.timeline-item.active {
+    border: 2px solid var(--saffron);
+    box-shadow: 0 0 16px 2px var(--saffron), 0 4px 24px rgba(0,0,0,0.12);
+}

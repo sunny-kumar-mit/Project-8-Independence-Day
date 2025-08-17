@@ -1,0 +1,373 @@
+[
+    {
+        "title": "Jallianwala Bagh",
+        "description": "Site of the 1919 massacre where British troops fired on a crowd of unarmed Indians, killing hundreds and galvanizing the independence movement.",
+        "lat": 31.6204,
+        "lng": 74.8765,
+        "type": "memorial",
+        "image": "https://static.toiimg.com/thumb/msid-75125758,imgsize-95326,width-400,resizemode-4/75125758.jpg"
+    },
+    {
+        "title": "Dandi",
+        "description": "Destination of Gandhi's famous Salt March in 1930, a nonviolent protest against the British salt monopoly.",
+        "lat": 20.9383,
+        "lng": 72.7849,
+        "type": "march",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Marche_sel.jpg"
+    },
+    {
+        "title": "Chauri Chaura",
+        "description": "Location of the 1922 incident that led Gandhi to call off the Non-Cooperation Movement.",
+        "lat": 26.6448,
+        "lng": 83.9739,
+        "type": "event",
+        "image": "https://d18x2uyjeekruj.cloudfront.net/wp-content/uploads/2021/02/chch.jpg"
+    },
+    {
+        "title": "Sabarmati Ashram",
+        "description": "Gandhi's home and the starting point of the Dandi Salt March.",
+        "lat": 23.0605,
+        "lng": 72.5805,
+        "type": "ashram",
+        "image": "https://www.mkgandhi.org/images/dandi-march.jpg"
+    },
+    {
+        "title": "Red Fort",
+        "description": "Where Jawaharlal Nehru raised the Indian flag on August 15, 1947, marking India's independence.",
+        "lat": 28.6562,
+        "lng": 77.2410,
+        "type": "fort",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/PM_Nehru_addresses_the_nation_from_the_Red_Fort_on_15_August_1947.jpg"
+    },
+    {
+        "title": "Andaman Cellular Jail",
+        "description": "British prison where many freedom fighters were exiled and tortured, now a national memorial.",
+        "lat": 11.675,
+        "lng": 92.7445,
+        "type": "jail",
+        "image": "https://www.go2andaman.com/wp-content/uploads/2021/01/Cellular-jail-and-sound-and-light-show-portblair-go2andaman-04-1-768x378.jpg"
+    },
+    {
+        "title": "Agra Fort",
+        "description": "A UNESCO World Heritage site and the seat of the Mughal Empire before Delhi. It holds historical significance for being a key administrative center during a period of British colonial rule.",
+        "lat": 27.1793,
+        "lng": 78.021,
+        "type": "fort",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Taj_Mahal%2C_Agra%2C_India.jpg/1280px-Taj_Mahal%2C_Agra%2C_India.jpg"
+    },
+    {
+        "title": "Gateway of India",
+        "description": "Built to commemorate the landing of King George V and Queen Mary in Mumbai. It became a symbolic landmark of British imperial power in India.",
+        "lat": 18.9219,
+        "lng": 72.8347,
+        "type": "memorial",
+        "image": "https://images.saymedia-content.com/.image/c_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_700/MTkxMjc4OTQ3OTIzNjY2NDY1/the-gateway-of-india-building-an-historical-british-monument-in-mumbai-india.webp"
+    },
+    {
+        "title": "Lucknow",
+        "description": "The capital of Uttar Pradesh, Lucknow was a major center of the 1857 Indian Rebellion, also known as the First War of Independence.",
+        "lat": 26.8467,
+        "lng": 80.9462,
+        "type": "city",
+        "image": "https://taazakhabarnews.com/wp-content/uploads/2021/01/Sepoy_Mutiny_1857-1.png"
+    },
+    {
+        "title": "Barrackpore",
+        "description": "The location where Mangal Pandey, a sepoy, initiated the 1857 Indian Rebellion by attacking his British officers. This event is widely considered the first spark of the rebellion.",
+        "lat": 22.7766,
+        "lng": 88.3755,
+        "type": "event",
+        "image": "https://sabrangindia.in//sites/default/files/images/Mangal%20pandey%201857.png"
+    },
+   
+    {
+        "title": "Wagah Border",
+        "description": "The border crossing between India and Pakistan, where a daily ceremony is held to symbolize the partition of India in 1947.",
+        "lat": 31.5976,
+        "lng": 74.5244,
+        "type": "border",
+        "image": "https://cdn.britannica.com/04/272604-050-1391477D/Pakistani-Rangers-And-Indian-Border-Security-Force-Soldiers-Take-Part-In-Beating-Retreat-Ceremony-On-The-Eve-Of-Pakistan-Independence-Day-Celebrations-At-The-Pakistan-India-Wagah-Border-Post-About-35km-From-Lahore.jpg"
+    },
+    {
+        "title": "Rajghat",
+        "description": "A memorial dedicated to Mahatma Gandhi, located in Delhi. It is the site of his cremation, and a black marble platform marks the spot where he was cremated.",
+        "lat": 28.6402,
+        "lng": 77.2415,
+        "type": "memorial",
+        "image": "https://alajournal.com/wp-content/uploads/2017/07/IMG_0245-676x320.jpg"
+    },
+    {
+        "title": "India Gate",
+        "description": "A war memorial located in Delhi, built to commemorate the Indian soldiers who died in World War I. It is a symbol of India's military history and sacrifice.",
+        "lat": 28.6129,
+        "lng": 77.2295,
+        "type": "memorial",
+        "image": "https://media.assettype.com/deccanherald%2Fimport%2Fsites%2Fdh%2Ffiles%2Farticle_images%2F2020%2F05%2F19%2FIndia-Gate-pti-838361641-1547396349.jpg?w=900&auto=format%2Ccompress&fit=max"
+    },
+    {
+        "title": "Champaran",
+        "description": "The site of Gandhi's first Satyagraha (nonviolent protest) in India in 1917, where he protested against the exploitation of indigo farmers by the British.",
+        "lat": 26.5401,
+        "lng": 84.7735,
+        "type": "event",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Gandhiji_and_Sub-Inspector_Qurban_Ali_in_Champaran_%281917%29.jpg"
+    },
+    {
+        "title": "Kakori",
+        "description": "The site of the 1925 Kakori train robbery, where Indian revolutionaries, including Ram Prasad Bismil and Ashfaqulla Khan, looted a train to fund their independence struggle.",
+        "lat": 26.8837,
+        "lng": 80.8143,
+        "type": "event",
+        "image": "https://iasbaba.com/wp-content/uploads/2022/12/kt.png"
+    },
+    {
+        "title": "Kanpur",
+        "description": "A key city during the 1857 Indian Rebellion, where a major massacre of British civilians and soldiers took place. It became a symbol of the brutality of the rebellion.",
+        "lat": 26.4499,
+        "lng": 80.3319,
+        "type": "city",
+        "image": "https://warfarehistorynetwork.com/wp-content/uploads/2015/11/M-IndianMut-Lead-4C-Feb05-2000x1142.jpg"
+    },
+    {
+        "title": "Kashi Vishwanath Temple",
+        "description": "A historic Hindu temple in Varanasi, it holds significance as a center of religious and cultural identity that was often targeted during colonial rule.",
+        "lat": 25.3096,
+        "lng": 83.0076,
+        "type": "religious site",
+        "image": "https://voiceofguides.com/wp-content/uploads/2021/03/Varanasi_Tautvaldas-Tumenas.jpg"
+    },
+    {
+        "title": "Chittagong",
+        "description": "The site of the 1930 Chittagong armoury raid, led by Surya Sen. The raid was a significant armed uprising against the British, showcasing the growing militancy of the independence movement.",
+        "lat": 22.3569,
+        "lng": 91.7865,
+        "type": "event",
+        "image": "https://www.newsclick.in/sites/default/files/styles/responsive_885/public/2021-04/Chittagong%20Armoury%20Raid.jpeg?itok=8Ng_J5T0"
+    },
+    {
+        "title": "Mumbai",
+        "description": "A major hub of the independence movement. It was the site of the Quit India Movement resolution in 1942, and the city saw numerous protests and uprisings against the British.",
+        "lat": 19.076,
+        "lng": 72.8777,
+        "type": "city",
+        "image": "https://images.firstpost.com/wp-content/uploads/2020/08/quit-india-movement_640.jpg"
+    },
+    {
+        "title": "Poona Pact",
+        "description": "The agreement signed in 1932 between Mahatma Gandhi and B. R. Ambedkar, which established a joint electorate for 'untouchables' while reserving seats for them in the legislature.",
+        "lat": 18.5204,
+        "lng": 73.8567,
+        "type": "event",
+        "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5bFMDK5n7C3ltvHg2veGc0wwaRzPDDafq3_pFJTam1GrbU6oqbbBRdGQJaqN59qKpHcFIuJe6_dbZVInbXV97hArlJLLTEbafIPzupGqrei8nkIXd-XhAdSDZTKf9qevTi42JG1YrTb4/s320/gandhi-ambedkar-n.jpg"
+    },
+    {
+        "title": "Amritsar",
+        "description": "A city in Punjab that is a significant center of Sikhism. It is home to the Golden Temple and was the site of the Jallianwala Bagh massacre.",
+        "lat": 31.634,
+        "lng": 74.8723,
+        "type": "city",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/The_Golden_Temple_of_Amrithsar_7.jpg/1280px-The_Golden_Temple_of_Amrithsar_7.jpg"
+    },
+    {
+        "title": "Calcutta",
+        "description": "The former capital of British India, Calcutta was a major center of political, cultural, and intellectual activity during the independence movement.",
+        "lat": 22.5726,
+        "lng": 88.3639,
+        "type": "city",
+        "image": "https://worldfootprints.com/wp-content/uploads/2018/04/victoria-memorial.jpg"
+    },
+    {
+        "title": "Lahore",
+        "description": "A major city in present-day Pakistan, Lahore was an important center of the independence movement. The 1929 Lahore Resolution, which called for complete independence from Britain, was passed here.",
+        "lat": 31.5497,
+        "lng": 74.3436,
+        "type": "city",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/56/NehruAddressingCrowds_FatehMaidan.jpg"
+    },
+    {
+        "title": "Swaraj Bhavan",
+        "description": "The former residence of the Nehru family in Allahabad, it was a central hub for the Indian National Congress and a key meeting place for freedom fighters.",
+        "lat": 25.4411,
+        "lng": 81.8315,
+        "type": "building",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Anand_Bhawan%2C_Allahabad.jpg"
+    },
+    {
+        "title": "Shimla",
+        "description": "The summer capital of British India, where many important political decisions were made, including the Simla Conference of 1945.",
+        "lat": 31.1048,
+        "lng": 77.1734,
+        "type": "city",
+        "image": "https://theindosphere.com/wp-content/uploads/2024/09/image-22-15.jpg"
+    },
+    {
+        "title": "Gwalior",
+        "description": "The location where Rani Lakshmibai of Jhansi died fighting the British during the 1857 Indian Rebellion.",
+        "lat": 26.2183,
+        "lng": 78.1828,
+        "type": "city",
+        "image": "https://archives.vsktelangana.org/wp-content/uploads/2021/06/Jhansi-Ki-Rani-Laxmibai-810x540-1.jpg"
+    },
+  
+    {
+        "title": "Satyagraha Ashram",
+        "description": "An early ashram established by Mahatma Gandhi in Ahmedabad, where he experimented with his principles of satyagraha.",
+        "lat": 23.0605,
+        "lng": 72.5805,
+        "type": "ashram",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/GANDHI_ASHRAM_03.jpg/1280px-GANDHI_ASHRAM_03.jpg"
+    },
+    {
+        "title": "Mahatma Gandhi's birthplace",
+        "description": "The house in Porbandar, Gujarat, where Mahatma Gandhi was born. It is now a memorial and museum.",
+        "lat": 21.6416,
+        "lng": 69.6053,
+        "type": "memorial",
+        "image": "https://traveltwosome.com/wp-content/uploads/2016/08/Collages17-1024x614.jpg"
+    },
+    {
+        "title": "Viceroy's House",
+        "description": "Now known as Rashtrapati Bhavan, it was the official residence of the Viceroy of India and became the presidential palace after independence.",
+        "lat": 28.6146,
+        "lng": 77.1994,
+        "type": "building",
+        "image": "https://cdn.britannica.com/39/155439-050-038417EE/Rashtrapati-Bhavan-new-delhi-india.jpg?w=1000"
+    },
+    {
+        "title": "Parliament House",
+        "description": "The seat of the Parliament of India, it was formerly the Council House during British rule and witnessed the transfer of power on August 15, 1947.",
+        "lat": 28.6129,
+        "lng": 77.2125,
+        "type": "building",
+        "image": "https://images.firstpost.com/uploads/2025/08/2024-08-Independence-2024-08-980b09c484dd812d17832ea0bc529727-2025-08-a55c6b2d822168ca0b715dbfd9c9a85c.jpg?im=FitAndFill=(596,336)"
+    },
+    {
+        "title": "Teen Murti Bhavan",
+        "description": "The former residence of Jawaharlal Nehru, it is now a museum and library dedicated to his life and the freedom struggle.",
+        "lat": 28.6146,
+        "lng": 77.1994,
+        "type": "building",
+        "image": "https://www.manoramayearbook.in/content/dam/yearbook/learn/world/images/2023/june/nmml.jpg"
+    },
+    {
+        "title": "Agartala",
+        "description": "The capital of Tripura, it was a princely state that acceded to India after independence. The state played a role in the liberation of Bangladesh from Pakistan.",
+        "lat": 23.8315,
+        "lng": 91.2868,
+        "type": "city",
+        "image": "https://images.news9live.com/wp-content/uploads/2024/10/Tripura.png?w=802&enlarge=true"
+    },
+    {
+        "title": "Hyderabad",
+        "description": "A princely state that resisted joining the Indian Union after independence. It was eventually integrated into India through a military operation in 1948.",
+        "lat": 17.385,
+        "lng": 78.4867,
+        "type": "city",
+        "image": "https://www.hindustantimes.com/ht-img/img/2023/09/16/550x309/The-princely-state-of-Hyderabad-joined-the-Indian-_1694890292802_1694900456390.jpg"
+    },
+    {
+        "title": "Junagadh",
+        "description": "A princely state in Gujarat that was a point of contention during the partition of India. Its ruler wanted to join Pakistan, but the population voted to join India.",
+        "lat": 21.5222,
+        "lng": 70.4579,
+        "type": "city",
+        "image": "https://sc0.blr1.digitaloceanspaces.com/large/884176-b7e1e8a3-181e-43d1-8b07-42df72604573.jpg"
+    },
+    {
+        "title": "Kashmir",
+        "description": "A region that has been a point of conflict between India and Pakistan since the partition of India. It has been the site of numerous wars and a source of political tension.",
+        "lat": 34,
+        "lng": 76,
+        "type": "region",
+        "image": "https://dims.apnews.com/dims4/default/da80df8/2147483647/strip/true/crop/3150x1915+0+0/resize/1440x875!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fa8%2Fd2%2F7b6568baa7f5d269b4dda387487c%2Fac8ac8d38ef740419260a9b7d8f76bac"
+    },
+    {
+        "title": "Goa",
+        "description": "A Portuguese colony that was liberated by India in 1961. The liberation of Goa marked the end of European colonialism in India.",
+        "lat": 15.2993,
+        "lng": 74.124,
+        "type": "region",
+        "image": "https://im.indiatimes.in/content/2021/Dec/toi_61b9b71abe8fd.jpg?w=1200&h=900&cc=1&webp=1&q=75"
+    },
+    {
+        "title": "Nagpur",
+        "description": "The headquarters of the Rashtriya Swayamsevak Sangh (RSS), a Hindu nationalist organization that played a role in the political landscape of independent India.",
+        "lat": 21.1458,
+        "lng": 79.0882,
+        "type": "city",
+        "image": "https://media.npr.org/assets/img/2019/03/26/gettyimages-503257480_wide-353b56574f35a2631cba98440d662c98b1ccae49.jpg?s=900&c=85&f=webp"
+    },
+    {
+        "title": "Bardoli",
+        "description": "The site of the 1928 Bardoli Satyagraha, a nonviolent protest led by Sardar Vallabhbhai Patel against the British government's unjust tax increase.",
+        "lat": 21.1275,
+        "lng": 73.1118,
+        "type": "event",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Gandhi_and_Sadar_Patel_Bardoli_Satyagraha.jpg/1280px-Gandhi_and_Sadar_Patel_Bardoli_Satyagraha.jpg"
+    },
+    {
+        "title": "Madras",
+        "description": "Now known as Chennai, this city was a major center of anti-colonial protests and the site of the first meeting of the Indian National Congress in 1887.",
+        "lat": 13.0827,
+        "lng": 80.2707,
+        "type": "city",
+        "image": "https://th-i.thgim.com/public/migration_catalog/article16415091.ece/alternates/LANDSCAPE_1200/21SMOLDMADRAS"
+    },
+    {
+        "title": "Kheda",
+        "description": "The site of the 1918 Kheda Satyagraha, a protest organized by Gandhi against the British government's decision to collect taxes despite a crop failure.",
+        "lat": 22.7533,
+        "lng": 72.6806,
+        "type": "event",
+        "image": "https://cdn.educba.com/academy/wp-content/uploads/2023/01/Bardoli-Satyagraha-2..jpg"
+    },
+    {
+        "title": "Meerut",
+        "description": "The city where the 1857 Indian Rebellion began. Indian sepoys mutinied against their British officers, and the rebellion quickly spread to other parts of the country.",
+        "lat": 28.9845,
+        "lng": 77.7061,
+        "type": "city",
+        "image": "https://warfarehistorynetwork.com/wp-content/uploads/2015/11/M-IndianMut-Lead-4C-Feb05-2000x1142.jpg"
+    },
+    {
+        "title": "Tashkent",
+        "description": "The city where Indian Prime Minister Lal Bahadur Shastri died in 1966 after signing the Tashkent Declaration with Pakistan to end the 1965 Indo-Pakistani War.",
+        "lat": 41.2995,
+        "lng": 69.2401,
+        "type": "city",
+        "image": "https://s3.ap-southeast-1.amazonaws.com/images.asianage.com/images/aa-Cover-43qskldka878vq8q59v2hgvhq6-20180110013120.Medi.jpeg"
+    },
+    {
+        "title": "Pondicherry",
+        "description": "A former French colony that was integrated into India in 1954. It is now a Union Territory of India.",
+        "lat": 11.9416,
+        "lng": 79.8083,
+        "type": "city",
+        "image": "https://www.py.gov.in/sites/default/files/history01.jpg"
+    },
+    {
+        "title": "Kolkata",
+        "description": "Formerly known as Calcutta, it was the capital of British India until 1911 and a major center of the independence movement.",
+        "lat": 22.5726,
+        "lng": 88.3639,
+        "type": "city",
+        "image": "https://calcuttachronicle.co.in/wp-content/uploads/2024/05/Untitled-1-1-1536x1024.jpg"
+    },
+ 
+    {
+        "title": "Bhopal",
+        "description": "A former princely state that was a center of anti-colonial resistance and the site of the Bhopal Gas Tragedy in 1984.",
+        "lat": 23.2599,
+        "lng": 77.4126,
+        "type": "city",
+        "image": "https://origins.osu.edu/sites/default/files/inline-images/Union_Carbide_pesticide_factory%2C_Bhopal%2C_India%2C_1985.jpg"
+    },
+    {
+        "title": "Suez Canal",
+        "description": "A man-made waterway in Egypt that was strategically important for the British Empire as it provided a shorter trade route to India.",
+        "lat": 30.5694,
+        "lng": 32.5532,
+        "type": "geographical feature",
+        "image": "https://sc0.blr1.cdn.digitaloceanspaces.com/article/157068-cewldhmozr-1617357453.jpg"
+    }
+]

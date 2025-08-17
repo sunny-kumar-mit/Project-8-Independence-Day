@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 79th Independence Day | India</title>
+    <meta property="og:title" content="Celebrate India's Independence Day">
+    <meta property="og:description" content="Interactive tribute to India's freedom struggle and progress">
+    <meta property="og:image" content="assets/images/social-share.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/ar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Patriot+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <audio id="bgMusic" src="data/music.mp3"></audio>
+    <video class="bg-video" autoplay loop muted playsinline>
+        <source src="data/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="pulse-border"></div>
+    <div class="fireworks-container" id="fireworks"></div>
+    <div class="constellations hidden"></div>
+    
+    <audio id="bgMusic" loop>
+        <source src="assets/audio/anthem.mp3" type="audio/mpeg">
+    </audio>
+    
+    <div class="music-control">
+        <button id="musicToggle">🔊 Play Music</button>
+    </div>
+
+    <button id="arFlag" class="ar-button floating">🚩 Hoist Flag in AR</button>
+    <div id="arScene" class="hidden"></div>
+
+    <div class="container">
+        <header>
+            <div class="flag-animation" id="flag" data-fact="">
+                <div class="flag-stripes">
+                    <div class="saffron"></div>
+                    <div class="white">
+                        <img src="https://i.postimg.cc/ncZNvVMH/India-Ashoka-Chakra-Dharmachakra-Buddhism-PNG-removebg-preview.png" 
+                             alt="Ashoka Chakra" 
+                             class="chakra-3d" 
+                             id="chakra">
+                    </div>
+                    <div class="green"></div>
+                </div>
+            </div>
+            <h1>Happy Independence Day</h1>
+            <div class="subtitle">Celebrating 79 Years of Freedom | August 15, 1947 - 2025</div>
+        </header>
+        
+        <div class="main-content">
+            <div class="card floating interactive-card" style="animation-delay: 0.1s;">
+                <h2>Freedom Struggle</h2>
+                <p>Remembering the sacrifices of our freedom fighters who fought tirelessly for India's independence.</p>
+                <div class="hidden-fact">Did you know? The Indian independence movement began in 1857 with the Sepoy Mutiny.</div>
+            </div>
+            
+            <div class="card floating interactive-card" style="animation-delay: 0.3s;">
+                <h2>Unity in Diversity</h2>
+                <p>India's strength lies in its diversity. We stand united as one nation, proud and free.</p>
+                <div class="hidden-fact">India has 22 officially recognized languages and over 19,500 dialects!</div>
+            </div>
+            
+            <div class="card floating interactive-card" style="animation-delay: 0.5s;">
+                <h2>Progress & Development</h2>
+                <p>From a nascent nation to a global power, India has made remarkable progress.</p>
+                <div class="hidden-fact">India's GDP has grown from ₹2.7 lakh crore in 1947 to ₹150 lakh crore today!</div>
+            </div>
+        </div>
+        
+        <div class="quote-section parallax">
+            <p class="quote">Long years ago we made a tryst with destiny, and now the time comes when we shall redeem our pledge...</p>
+            <p class="author">— Jawaharlal Nehru, first Prime Minister of India</p>
+        </div>
+        
+        <section class="map-section">
+            <h2>Key Freedom Movement Locations</h2>
+            <div class="map-info">
+                <p>Click on the markers to learn about important locations in India's freedom struggle</p>
+                <div class="map-legend">
+                    <div class="legend-item">
+                        <span class="legend-icon memorial"></span>
+                        <span>Memorial</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon march"></span>
+                        <span>March</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-icon event"></span>
+                        <span>Event</span>
+                    </div>
+                </div>
+            </div>
+            <div id="freedomMap"></div>
+        </section>
+        
+        <section class="timeline-section">
+            <h2>India's Journey Through Time</h2>
+            <div class="timeline-container" id="timeline"></div>
+            <div class="timeline-scroll-indicator">
+                <div class="timeline-scroll-bar"></div>
+            </div>
+        </section>
+        
+        <section class="quiz-section">
+            <h2>How Well Do You Know India?</h2>
+            <div class="quiz-container" id="quiz"></div>
+            <div class="quiz-result" id="quizResult"></div>
+        </section>
+        
+        <section class="pledge-section">
+            <h2>Take the Pledge</h2>
+            <div class="pledge-container">
+                <input type="text" id="userName" placeholder="Enter your name">
+                <button id="generatePledge">Generate My Pledge</button>
+                <button id="voicePledge" class="hidden">🎤 Recite Pledge</button>
+                <div id="voiceFeedback" class="hidden"></div>
+                <div class="pledge-card" id="pledgeCard">
+                    <p id="personalPledge">"India is my country and all Indians are my brothers and sisters..."</p>
+                </div>
+                <button id="sharePledge" class="hidden">Share My Pledge</button>
+            </div>
+        </section>
+        
+        <section class="poetry-section">
+            <h2>Create Patriotic Poetry</h2>
+            <input type="text" id="poetryKeywords" placeholder="Enter themes (e.g., freedom, unity)">
+            <button id="generatePoem">Generate Poem</button>
+            <div class="poem-result" id="poemResult"></div>
+        </section>
+    </div>
+    
+    <footer class="parallax">
+        <p>Jai Hind! Let's work together to build a stronger, more prosperous India. <br>© 2025 All Rights Reserved By Sunny</p>
+        <div class="day-night-toggle">
+            <button id="themeToggle">Switch to Night Mode</button>
+        </div>
+        <div class="social-share">
+            <button id="shareWhatsApp">Share on WhatsApp</button>
+            <button id="shareTwitter">Share on Twitter</button>
+        </div>
+    </footer>
+
+    <!-- Chatbot Button -->
+<button id="chatbotToggle" class="chatbot-toggle floating">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+  </svg>
+</button>
+
+<!-- Chatbot Container -->
+<div id="chatbotContainer" class="chatbot-container hidden">
+  <div class="chatbot-header">
+    <h3>Patriotic Assistant</h3>
+    <button id="chatbotClose" class="chatbot-close">×</button>
+  </div>
+  <div class="chatbot-messages" id="chatbotMessages">
+    <div class="chatbot-message bot">
+      <div class="message-content">
+        <p>Welcome! I'm your patriotic assistant. How can I help you learn about India's glorious history and culture today?</p>
+        <div class="quick-options">
+          <button class="quick-option" data-query="Tell me about India's independence">India's Independence</button>
+          <button class="quick-option" data-query="Who were key freedom fighters?">Freedom Fighters</button>
+          <button class="quick-option" data-query="Explain the Indian flag">Indian Flag</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" id="chatbotInput" placeholder="Ask about India's history..." autocomplete="off">
+    <button id="chatbotSend">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"></line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+      </svg>
+    </button>
+  </div>
+</div>
+
+    <!-- Libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe@1.2.0/dist/aframe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/fireworks.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/voice.js"></script>
+    <script src="js/ar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
